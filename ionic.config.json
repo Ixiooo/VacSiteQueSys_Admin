@@ -1,0 +1,7 @@
+{
+  "name": "VacSiteQueSys_Admin",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

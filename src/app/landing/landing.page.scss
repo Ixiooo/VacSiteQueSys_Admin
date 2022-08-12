@@ -1,0 +1,20 @@
+ion-content{
+    // --background: #c1ebeb;
+    --background: url(/assets/img/bg.jpg) 0 0/100% 100% no-repeat;
+}
+
+ion-button
+{
+    --color:white;
+    --background: #6bbfc0;
+
+    --color-hover: #55fcff;
+    --color-focused: #55fcff;
+    --background-hover: #3c8f8f;
+    --background-focused: #3c8f8f;
+}
+
+.start_button{
+    width: 120px;
+    margin-top: 430px;
+}

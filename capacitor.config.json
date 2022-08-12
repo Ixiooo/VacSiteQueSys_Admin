@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "VacSiteQueSys_Admin",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

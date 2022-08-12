@@ -1,0 +1,89 @@
+<ion-header [translucent]="true">
+  <ion-toolbar  style="--background: #3c8f8f; border-bottom: 0px;">
+    <ion-title style="color: #ffffff; font-size: 20px; text-align: center;" >Admin Home</ion-title>
+
+    <ion-buttons slot="primary">
+      <ion-button class="reset_button" (click)="resetConfirm()">
+        <ion-icon name="refresh-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-grid>
+
+    <div *ngFor="let check of queueCheck" >
+      
+      <!-- Start of If Condition to check if there are people on queue -->
+      <span *ngIf="check.exists; else elseBlock">
+
+        <!-- Row for Displaying Queue Numbers -->
+        <ion-row class="ion-justify-content-center queue_col">
+          <ion-col>
+
+            <!-- Col for Displaying Queue Number being entertained -->
+            <ion-card class="queue_card" *ngFor="let item of currentQueueList | slice:0:1;" >
+              <ion-card-header>
+                <ion-card-title style="text-align: center;" > <p class="queue_title">Queue Number Being Served: </p> 
+                <br> <ion-text > <h4 class="queue_num"> {{item.queue_pos}} </h4> </ion-text> 
+                </ion-card-title>
+                
+                <ion-card-subtitle> <p class="queue_subtitle">Personal Information</p>  </ion-card-subtitle>
+              </ion-card-header>
+
+              <ion-card-content>
+                <div class="field1">
+                  <h5 class="data_category">Name: </h5> <p class="data_info">{{item.Name}} <br></p>
+                </div>
+                <div class="field2">
+                  <h5 class="data_category">Age: </h5> <p class="data_info">{{item.Age}} years old <br></p>
+                </div>
+                <div class="field3">
+                  <h5 class="data_category">Sex: </h5> <p class="data_info">{{item.Sex}} <br></p>
+                </div>
+                <div class="field4">
+                  <h5 class="data_category">Contact Number: </h5> <p class="data_info">{{item.Contact_Number}} <br></p>
+                </div>
+                <div class="field5">
+                  <h5 class="data_category">Address: </h5> <p class="data_info">{{item.Address}} </p>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          
+        </ion-row>
+      </span>
+
+      <!-- Else Condition after checking if there are people on queue -->
+      <ng-template #elseBlock>
+        <ion-row class="ion-justify-content-center queue_col">
+          <ion-col>
+
+            <ion-card class="empty_queue_card">
+              <ion-card-header>
+                <ion-card-title style="text-align: center; color: white;">No People in Queue</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+
+              </ion-card-content>
+            </ion-card>
+
+          </ion-col>  
+        </ion-row>
+      </ng-template>
+    </div>  
+    <!-- End of If Condition -->
+
+    
+
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="button_col" size=“auto” col-md>
+        <ion-button class="next_button" size="large" (click)="nextinQueue()"> Next</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+   
+</ion-content>

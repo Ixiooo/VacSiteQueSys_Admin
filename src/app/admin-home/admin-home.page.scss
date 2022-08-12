@@ -1,0 +1,95 @@
+ion-content{
+    --background: #c1ebeb;
+}
+
+.empty_queue_card{
+    background: linear-gradient(180deg, rgba(61,175,176,1) 0%, rgba(159,210,210,1) 100%);
+    color: white; 
+}
+
+.queue_col
+{
+    margin-top: -10px;
+    height: 430px;
+}
+
+.button_col
+{
+    margin-top: 40px;
+    height: 50px;
+}
+
+.queue_card
+{
+    height: 435px;
+    background: linear-gradient(180deg, rgba(61,175,176,1) 0%, rgba(159,210,210,1) 100%);
+    color: white;
+}
+
+
+.queue_title
+{
+    color: white;
+    margin-top: -3px;
+    margin-bottom: -40px;
+}
+
+.queue_num
+{
+    color: white;
+    font-size: 80px;
+    margin-bottom: -10px;
+}
+
+.queue_subtitle
+{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+.queue_content
+{
+    font-family: 'Roboto', 'Regular';
+}
+
+.data_category
+{
+    font-weight: 400;
+    text-align: center;
+    font-size: 18px;
+    display: inline;
+}
+
+.data_info
+{
+    font-weight: 300;
+    text-align: center;
+    font-size: 16px;
+    display: inline;
+}
+
+.field1, .field2, .field3, .field4, .field5
+{
+    margin-top: 8px;
+}
+
+.next_button{
+    --background: #6bbfc0;
+    --color: white;
+    
+    --color-hover: #55fcff;
+    --color-focused: #55fcff;
+    --background-hover: #3d7e80;
+    --background-focused: #3d7e80;
+}
+
+.reset_button{
+    
+    --color: white;
+
+    --color-focused: #55fcff;
+    --color-hover: #000000;
+
+}
